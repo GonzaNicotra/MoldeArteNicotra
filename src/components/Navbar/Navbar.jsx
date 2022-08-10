@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import LogoMA from '../../assets/logoMoldearte.png';
+import CartWidget from '../CartWidget/CartWidget.jsx';
 
 
 function BasicNav() {
@@ -29,6 +30,7 @@ function BasicNav() {
             <Nav.Link href="#link">Contacto</Nav.Link>
           </Nav>
         </Navbar.Collapse>
+        <CartWidget/>
       </Container>
     </Navbar>
   );

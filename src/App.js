@@ -1,11 +1,14 @@
 import Navbar from './components/Navbar/Navbar.jsx';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
 
 function App() {
   return (
     <div className="App">
-      <Navbar></Navbar>
+      <Navbar/>
+      <ItemListContainer greeting="Bienvenido a MoldeArte"/>
     </div>
   );
 }
