@@ -4,20 +4,18 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import LogoMA from '../../assets/logoMoldearte.png';
 import CartWidget from '../CartWidget/CartWidget.jsx';
-
+import './Navbar.css';
 
 function BasicNav() {
   return (
-    <Navbar style={{backgroundColor: "#d368c5d3"}} expand="lg">
+    <Navbar style={{backgroundColor: "#d368c5d3"}} variant='dark' expand="lg">
       <Container>
         <Navbar.Brand href="#home"><img
               src={LogoMA}
-              width="160"
-              height="56"
-              className="d-inline-block align-top"
-              alt="MoldeArte logo"
-            /></Navbar.Brand>
-        <Navbar.Toggle aria-controls="basic-navbar-nav" />
+              className="d-inline-block align-top imagen"
+              alt="MoldeArte logo"/>
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav"/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="m-auto">
             <Nav.Link href="#link">Inicio</Nav.Link>
