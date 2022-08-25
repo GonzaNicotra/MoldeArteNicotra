@@ -8,7 +8,7 @@ function App() {
   return (
     <div className="App">
       <Navbar/>
-      <ItemListContainer/>
+      <ItemListContainer row={4}/>
     </div>
   );
 }

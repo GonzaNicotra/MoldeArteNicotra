@@ -1,6 +1,5 @@
 import './ItemListContainer.css';
 import React, { useEffect } from 'react';
-import ItemCount from '../ItemCount/ItemCount';
 import { useState } from 'react';
 import ItemList from '../ItemList/ItemList';
 
@@ -24,14 +23,10 @@ export default function ItemListContainer() {
     })
   }, [])
 
-  const onAdd = (counter) => {
-    console.log('el valor es:', counter);
-  }
 
   return (
     <div>
       <ItemList items={items}/>
-      <ItemCount stock={4} initial={0} onAdd={onAdd}/>
     </div>
   )
 }

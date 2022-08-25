@@ -7,11 +7,10 @@ export default function ItemCount({stock, initial, onAdd}) {
 
   return (
     <>
-    <div>Contador</div>
-    <button onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}>-</button>
+    <button className='bComprar' onClick={()=>{setCounter(counter - 1)}} disabled={counter === initial}>-</button>
     <span>{counter}</span>
-    <button onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}>+</button>
-    <div><button onClick={()=>onAdd(counter)} disabled={counter === 0}>Agregar al carrito</button></div>
+    <button className='bComprar' onClick={()=>{setCounter(counter + 1)}} disabled={counter === stock}>+</button>
+    <div><button className='bComprar' onClick={()=>onAdd(counter)} disabled={counter === 0}>Agregar al carrito</button></div>
     </>
   )
 }
