@@ -11,6 +11,9 @@ export default function ItemListContainer() {
   useEffect(() => {
     const products = [
       {nombre:"Taza VyV", precio:500, id:123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp'},
+      {nombre:"Taza VyV", precio:500, id:123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp'},
+      {nombre:"Taza VyV", precio:500, id:123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp'},
+      {nombre:"Taza VyV", precio:500, id:123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp'},
       {nombre:"Taza VyN", precio:520 , id:456, img:'https://molde-arte.vercel.app/assets/tazaUno.webp'}
     ];
     new Promise((resolve) => {
