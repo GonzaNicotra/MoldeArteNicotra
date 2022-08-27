@@ -9,8 +9,8 @@ export default function ItemDetailContainer() {
 
     useEffect(() => {
         const products = [
-            {nombre:"Taza VyV", precio: 500, id: 123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp'},
-            {nombre:"Taza VyV", precio: 500, id: 456, img:'https://molde-arte.vercel.app/assets/tazaUno.webp'},];
+            {nombre:"Taza VyV", precio: 500, id: 123, img:'https://molde-arte.vercel.app/assets/tazaTres.webp', info: 'Esto es una taza'},
+            {nombre:"Taza VyV", precio: 500, id: 456, img:'https://molde-arte.vercel.app/assets/tazaUno.webp', info: 'Esto es una taza'},];
         new Promise((resolve) => {
 
             setTimeout(() => {
