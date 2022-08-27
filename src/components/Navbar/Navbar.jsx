@@ -20,7 +20,7 @@ function BasicNav() {
           <Nav className="m-auto">
             <Nav.Link href="#link">Inicio</Nav.Link>
             <NavDropdown title="Productos" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Tazas</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.1">Tazas</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.2">Mates</NavDropdown.Item>
               <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
             </NavDropdown>

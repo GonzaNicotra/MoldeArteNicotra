@@ -3,12 +3,20 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import ItemListContainer from './components/ItemListContainer/ItemListContainer.jsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import ItemDetailContainer from './components/ItemDetailContainer/ItemDetailContainer.jsx';
 
 function App() {
   return (
     <div className="App">
+      <BrowserRouter>
       <Navbar/>
-      <ItemListContainer row={4}/>
+      <Routes>
+      <Route path='/' element={<ItemListContainer/>} />
+      <Route path='/category/:categoryid' element={<ItemListContainer/>} />
+      <Route path='/item/:id' element={<ItemDetailContainer/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }
