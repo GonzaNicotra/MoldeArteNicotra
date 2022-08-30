@@ -7,9 +7,6 @@ import {Link} from 'react-router-dom';
 
 function Item({id, nombre, precio, img, category}) {
 
-
-
-
   return (
         <Card className='cardProd' style={{ width: '11rem' }}>
         <Card.Img id='img' variant="top" src={img} />

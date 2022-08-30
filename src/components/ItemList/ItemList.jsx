@@ -7,7 +7,7 @@ export default function ItemList({items}) {
     <Container>
     <div className='d-flex flex-row flex-wrap justify-content-around'>
          {items.map((item, indx) =>
-            <Item key={indx} id={item.id} nombre={item.nombre} precio={item.precio} img={item.img}/>
+            <Item key={indx} id={item.id} nombre={item.nombre} precio={item.precio} img={item.img} category={item.category}/>
         )}
     </div>
     </Container>

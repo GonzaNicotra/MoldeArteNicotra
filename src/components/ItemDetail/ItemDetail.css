@@ -1,6 +1,5 @@
 .cardDetail {
     box-shadow: 0px 0px 49px 20px rgba(138, 48, 126, 0.733);
-    border-radius: 10px;
     border: 0.5px solid rgba(138, 48, 126, 0.733);
     font-size: 20px;
     font-weight: bold;
@@ -13,6 +12,7 @@
 .imgDetail {
     width: 200px;
     height: 200px;
+    border-radius: 10px;
 }
 
 

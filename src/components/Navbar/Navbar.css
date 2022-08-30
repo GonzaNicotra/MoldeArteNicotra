@@ -1,4 +1,9 @@
 .imagen {
     width: 180px;
     height: 56px;
+    overflow: hidden;
+}
+
+nav {
+    margin-bottom: 3rem;
 }
