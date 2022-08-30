@@ -1,10 +1,14 @@
 import React from 'react';
-import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 export default function ItemDetail({item}) {
     const {id, nombre, precio, img, info} = item;
+    const onAdd = (counter) => {
+      console.log('el valor es:', counter);
+    }
+
   return (
         <Card className='cardDetail '>
             <Card.Body>
@@ -13,8 +17,7 @@ export default function ItemDetail({item}) {
                 <Card.Text>Id:{id}</Card.Text>
                 <Card.Text>{info}</Card.Text>
                 <Card.Text>${precio}</Card.Text>
-                <Card.Text></Card.Text>
-                <Button className='bComprar' variant="primary">Comprar</Button>
+                <ItemCount stock={4} initial={0} onAdd={onAdd}/>
         </Card.Body>
         </Card>
 
