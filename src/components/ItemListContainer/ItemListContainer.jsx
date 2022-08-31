@@ -35,7 +35,7 @@ export default function ItemListContainer() {
       <div>
       <ItemList items={items}/>
       </div> :
-      <Spinner animation="border"/>
+      <Spinner animation="border" variant='danger'/>
       }
     </div>
   )
