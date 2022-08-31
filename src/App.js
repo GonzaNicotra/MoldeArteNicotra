@@ -10,12 +10,12 @@ function App() {
   return (
     <div className="App">
       <BrowserRouter>
-      <Navbar/>
-      <Routes>
-      <Route path='/' element={<ItemListContainer/>} />
-      <Route path='/category/:categoryid' element={<ItemListContainer/>} />
-      <Route path='/item/:id' element={<ItemDetailContainer/>} />
-      </Routes>
+        <Navbar/>
+        <Routes>
+          <Route path='/' element={<ItemListContainer/>} />
+          <Route path='/category/:categoryid' element={<ItemListContainer/>} />
+          <Route path='/item/:id' element={<ItemDetailContainer/>} />
+        </Routes>
       </BrowserRouter>
     </div>
   );
