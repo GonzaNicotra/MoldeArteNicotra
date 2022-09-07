@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react'
 import ItemListContainer from '../ItemListContainer/ItemListContainer';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import ItemDetailContainer from '../ItemDetailContainer/ItemDetailContainer';
@@ -6,15 +5,6 @@ import Navbar from '../Navbar/Navbar';
 import Cart from '../Cart/Cart';
 
 export default function Rutas() {
-
-    useEffect(() => {
-      
-    
-      return () => {
-        
-      }
-    }, [])
-    
 
   return (
     <div>
