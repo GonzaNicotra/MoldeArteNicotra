@@ -33,7 +33,15 @@ function BasicNav() {
                 <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
                 </Link>
             </NavDropdown>
+            <NavLink to={'/'}>
+              <Nav.Link href="#link">Diseños Personalizados</Nav.Link>
+            </NavLink>
+            <NavLink to={'/'}>
+              <Nav.Link href="#link">Contactanos</Nav.Link>
+            </NavLink>
+            <Link to={'/cart'}>
             <CartWidget/>
+            </Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
