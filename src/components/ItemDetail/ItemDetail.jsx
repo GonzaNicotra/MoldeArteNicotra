@@ -5,7 +5,7 @@ import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 
 export default function ItemDetail({item}) {
-    const {id, nombre, precio, img, info, stock} = item;
+    const {id, nombre, precio, img, info, Stock} = item;
     const [count, setCounter] = useState(0);
     const onAdd = (counter) => {
       console.log('el valor es:', counter);
@@ -22,7 +22,7 @@ export default function ItemDetail({item}) {
                 <Card.Text>${precio}</Card.Text>
                 { count ? 
                 <Link to='/cart'><button className='bComprar'>Finalizar Compra</button> </Link> : 
-                <ItemCount stock={stock} initial={0} onAdd={onAdd}/> }
+                <ItemCount stock={Stock} initial={0} onAdd={onAdd}/> }
         </Card.Body>
         </Card>
 
