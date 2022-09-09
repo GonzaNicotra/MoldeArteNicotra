@@ -10,7 +10,6 @@ export default function ItemDetail({item}) {
     const {addItem} = useContext(CartContext);
     const [count, setCounter] = useState(0);
     const onAdd = (counter) => {
-      console.log('el valor es:', counter);
       setCounter(counter)
       addItem(item, counter);
     }
@@ -23,9 +22,15 @@ export default function ItemDetail({item}) {
                 <Card.Text>Id:{id}</Card.Text>
                 <Card.Text>{info}</Card.Text>
                 <Card.Text>${precio}</Card.Text>
-                { count ? 
-                <Link to='/cart'><button className='bComprar'>Finalizar Compra</button> </Link> : 
-                <ItemCount stock={Stock} initial={0} onAdd={onAdd}/> }
+                { count ? <>
+                <div>
+                  <Link to='/cart'><button className='bComprar'>Ir al carrito</button> </Link>
+                </div>
+                <div>
+                  <Link to={'/'}><button className='bComprar'>Agregar más productos</button></Link>
+                </div>
+                </> :
+                  <ItemCount stock={Stock} initial={0} onAdd={onAdd}/> }
         </Card.Body>
         </Card>
 

@@ -1,3 +1,4 @@
+import React, {useContext} from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -5,9 +6,13 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 import LogoMA from '../../assets/logoMoldearte.png';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import './Navbar.css';
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink} from 'react-router-dom';
+import {CartContext} from '../../Context/CartContext';
 
 function BasicNav() {
+
+  const {items} = useContext(CartContext);
+  
   return (
     <Navbar style={{backgroundColor: "#d368c5d3"}} variant='dark' expand="lg">
       <Container>
