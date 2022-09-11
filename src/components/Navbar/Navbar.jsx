@@ -28,7 +28,7 @@ function BasicNav() {
             <NavLink to={'/productos'} className='detail'>
               <Nav.Link href="#link" active>Productos</Nav.Link>
             </NavLink>
-            <NavDropdown active title="Categorías" id="basic-nav-dropdown">
+            <NavDropdown active title="Categorías" className='detail' id="basic-nav-dropdown">
                 <Link className='detail' to={'/category/tazas'}>
                   <NavDropdown.Item href="#action/3.1">Tazas</NavDropdown.Item>
                 </Link>
