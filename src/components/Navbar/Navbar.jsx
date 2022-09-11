@@ -10,8 +10,6 @@ import {Link, NavLink} from 'react-router-dom';
 import {CartContext} from '../../Context/CartContext';
 
 function BasicNav() {
-
-  const {items} = useContext(CartContext);
   
   return (
     <Navbar style={{backgroundColor: "#d368c5d3"}} variant='dark' expand="lg">
