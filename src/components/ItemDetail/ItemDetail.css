@@ -1,18 +1,33 @@
 .cardDetail {
     box-shadow: 0px 0px 49px 20px rgba(138, 48, 126, 0.733);
     border: 0.5px solid rgba(138, 48, 126, 0.733);
-    font-size: 20px;
-    font-weight: bold;
-    line-height: 15px;
     margin-top: 4rem;
     margin-left: 8rem;
     margin-right: 8rem;
+    margin-bottom: 4rem;
+    border-radius: 10px;
 }
 
 .imgDetail {
-    width: 200px;
-    height: 200px;
+    height: 400px;
+    width: 400px;
     border-radius: 10px;
+}
+
+.cardTitle {
+    font-size: 30px;
+    font-weight: bold;
+    margin-top: 2rem;
+}
+
+.cardText {
+    font-size: 20px;
+    line-height: 15px;
+}
+
+.cardPrice {
+    font-size: 30px;
+    font-weight: bold;
 }
 
 
@@ -20,7 +35,24 @@
     .cardDetail{
         margin-right: 3rem;
         margin-left: 3rem;
-        font-size: 40px;
+        min-height: 60vh;
+    }
+    
+    .cardTitle {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .cardText {
+        font-size: 25px;
         line-height: 30px;
+        font-weight: bold;
+    }
+    
+
+    .imgDetail {
+        height: 350px;
+        width: 100%;
+        margin-bottom: 1rem;
     }
 }

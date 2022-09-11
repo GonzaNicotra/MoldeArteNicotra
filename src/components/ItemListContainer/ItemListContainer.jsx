@@ -35,7 +35,7 @@ getColData()
 
 
   return (
-    <div>
+    <div className='itemList'>
       {items.length < 1 ?
       <Spinner animation="border" variant='danger'/>:
       <div>

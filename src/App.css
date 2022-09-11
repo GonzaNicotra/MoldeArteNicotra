@@ -53,3 +53,8 @@
   color: aliceblue;
   margin-bottom: 5px;
 }
+
+.space {
+  min-height: 60vh;
+  margin-bottom: 2rem;
+}

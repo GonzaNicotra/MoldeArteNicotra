@@ -1,0 +1,8 @@
+.anchor {
+    color: white;
+    padding: 0.5rem;
+}
+
+.anchor:hover {
+    color: grey;
+}

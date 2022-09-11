@@ -15,21 +15,21 @@ export default function ItemDetail({item}) {
     }
 
   return (
-        <Card className='cardDetail '>
+        <Card className='cardDetail'>
             <Card.Body>
             <Card.Img className='imgDetail' variant="top" src={img} />
-                <Card.Title>{nombre}</Card.Title>
+                <Card.Title className='cardTitle'>{nombre}</Card.Title>
                 <template>
                 <Card.Text>Id:{id}</Card.Text>
                 </template>
-                <Card.Text>{info}</Card.Text>
-                <Card.Text>${precio}</Card.Text>
+                <Card.Text className='cardText'>{info}</Card.Text>
+                <Card.Text className='cardPrice'>${precio}</Card.Text>
                 { count ? <>
                 <div>
                   <Link to='/cart'><button className='bComprar'>Ir al carrito</button> </Link>
                 </div>
                 <div>
-                  <Link to={'/'}><button className='bComprar'>Agregar más productos</button></Link>
+                  <Link to={'/productos'}><button className='bComprar'>Agregar más productos</button></Link>
                 </div>
                 </> :
                   <ItemCount stock={stock} initial={0} onAdd={onAdd}/> }

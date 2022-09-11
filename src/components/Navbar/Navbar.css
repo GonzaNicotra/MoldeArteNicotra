@@ -3,6 +3,10 @@
     height: 56px;
 }
 
-nav {
-    margin-bottom: 3rem;
+.detail {
+    text-decoration: none;
+}
+
+.nav {
+    padding: 1rem;
 }

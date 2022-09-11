@@ -5,7 +5,7 @@ import Spinner from 'react-bootstrap/Spinner';
 
 export default function ItemList({items}) {
   return (
-    <Container>
+    <Container className='space'>
     <div className='d-flex flex-row flex-wrap justify-content-around'>
          {items.length < 1 ? (<Spinner/>) : (items.map((item, indx) =>
             <Item key={indx} id={item.id} nombre={item.nombre} precio={item.precio} img={item.img} category={item.category}/>
