@@ -1,4 +1,4 @@
-import React, {useContext} from 'react'
+import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -7,7 +7,7 @@ import LogoMA from '../../assets/logoMoldearte.png';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import './Navbar.css';
 import {Link, NavLink} from 'react-router-dom';
-import {CartContext} from '../../Context/CartContext';
+
 
 function BasicNav() {
   

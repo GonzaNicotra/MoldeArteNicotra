@@ -6,7 +6,7 @@ import './ItemDetail.css';
 import { CartContext } from '../../Context/CartContext';
 
 export default function ItemDetail({item}) {
-    const {id, nombre, precio, img, info, Stock} = item;
+    const {id, nombre, precio, img, info, stock} = item;
     const {addItem} = useContext(CartContext);
     const [count, setCounter] = useState(0);
     const onAdd = (counter) => {
@@ -19,7 +19,9 @@ export default function ItemDetail({item}) {
             <Card.Body>
             <Card.Img className='imgDetail' variant="top" src={img} />
                 <Card.Title>{nombre}</Card.Title>
+                <template>
                 <Card.Text>Id:{id}</Card.Text>
+                </template>
                 <Card.Text>{info}</Card.Text>
                 <Card.Text>${precio}</Card.Text>
                 { count ? <>
@@ -30,7 +32,7 @@ export default function ItemDetail({item}) {
                   <Link to={'/'}><button className='bComprar'>Agregar más productos</button></Link>
                 </div>
                 </> :
-                  <ItemCount stock={Stock} initial={0} onAdd={onAdd}/> }
+                  <ItemCount stock={stock} initial={0} onAdd={onAdd}/> }
         </Card.Body>
         </Card>
 
