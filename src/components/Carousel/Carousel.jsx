@@ -5,7 +5,7 @@ import './Carousel.css';
 function Carrusel() {
   return (
     <Carousel>
-      <Carousel.Item interval={1000}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100 carousel"
           src="https://galeriamarte.netlify.app/Assets/carrusel.png"
@@ -15,7 +15,7 @@ function Carrusel() {
           <h3 className='visually-hidden'>Bienvenidos a MoldeArte</h3>
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item interval={500}>
+      <Carousel.Item interval={3000}>
         <img
           className="d-block w-100 carousel"
           src="https://galeriamarte.netlify.app/Assets/carruselDos.png"
