@@ -1,3 +1,8 @@
 .itemList {
     margin-top: 3rem;
+    min-height: 70vh;
+}
+
+.color {
+    color: purple;
 }

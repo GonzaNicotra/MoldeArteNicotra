@@ -19,9 +19,7 @@ export default function ItemDetail({item}) {
             <Card.Body>
             <Card.Img className='imgDetail' variant="top" src={img} />
                 <Card.Title className='cardTitle'>{nombre}</Card.Title>
-                <template>
-                <Card.Text>Id:{id}</Card.Text>
-                </template>
+                <Card.Text className='visually-hidden' >Id:{id}</Card.Text>
                 <Card.Text className='cardText'>{info}</Card.Text>
                 <Card.Text className='cardPrice'>${precio}</Card.Text>
                 { count ? <>

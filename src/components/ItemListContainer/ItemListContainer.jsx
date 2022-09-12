@@ -36,12 +36,17 @@ getColData()
 
   return (
     <div className='itemList'>
-      {items.length < 1 ?
-      <Spinner animation="border" variant='danger'/>:
       <div>
-      <ItemList items={items}/>
+        <h1>Nuestros Productos</h1>
       </div>
+      <div>
+        {items.length < 1 ?
+        <Spinner animation="border" className='color'/>:
+        <div>
+          <ItemList items={items}/>
+        </div>
       }
+      </div>
     </div>
   )
 }

@@ -17,7 +17,7 @@ export function CartProvider({ children }) {
     }
 
     function removeItem(itemId){
-        setItems(items.filter((element) => element.id != itemId))
+        setItems(items.filter((element) => element.id !== itemId))
     }    
 
     function clear(){

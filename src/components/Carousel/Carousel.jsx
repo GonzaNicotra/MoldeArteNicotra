@@ -12,8 +12,7 @@ function Carrusel() {
           alt="First slide"
         />
         <Carousel.Caption>
-          <h3></h3>
-          <p></p>
+          <h3 className='visually-hidden'>Bienvenidos a MoldeArte</h3>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item interval={500}>
@@ -22,10 +21,6 @@ function Carrusel() {
           src="https://galeriamarte.netlify.app/Assets/carruselDos.png"
           alt="Second slide"
         />
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
         <img
@@ -33,10 +28,6 @@ function Carrusel() {
           src="https://galeriamarte.netlify.app/Assets/carruselTres.png"
           alt="Third slide"
         />
-        <Carousel.Caption>
-          <h3></h3>
-          <p></p>
-        </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
   );
