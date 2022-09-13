@@ -10,7 +10,7 @@ export default function Cart() {
   return (
   <div className='cart'>
     <>
-      <div>Cart</div>
+
       {!items.length ? 
       <>
         <div>
@@ -22,6 +22,7 @@ export default function Cart() {
     </> :
     <>
       <div>
+      <h2 className='fw-bold'>Carrito</h2>
         <div>
         {items.map(((item, indx) => <CartItems key={indx} img={item.img} nombre={item.nombre} precio={item.precio} quantity={item.quantity} id={item.id}  />))}
         </div>
