@@ -54,7 +54,6 @@
   margin-bottom: 5px;
 }
 
-.space {
-  min-height: 60vh;
-  margin-bottom: 2rem;
+.bComprar:hover {
+  color: rgb(245, 234, 242);
 }
