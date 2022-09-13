@@ -12,9 +12,7 @@ function Item({id, nombre, precio, img, category}) {
         <Card.Body>
             <Card.Title>{nombre}</Card.Title>
             <Card.Text>${precio}</Card.Text>
-            <template>
-            <Card.Text>Categoria:{category}</Card.Text>
-            </template>
+            <Card.Text className='visually-hidden'>Categoria:{category}</Card.Text>
             <Link to={`/item/${id}`}>
             <Button className='bComprar'>Ver Producto</Button>
             </Link>
