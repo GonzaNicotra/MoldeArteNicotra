@@ -7,7 +7,7 @@ export default function CartForm() {
 
 
   return (
-    <Form className='col-sm-12 col-md-6 p-5 row d-flex justify-content-center text'>
+    <Form className='col-sm-12 col-md-4 p-5 row d-flex justify-content-center text'>
       <h2>Datos de Compra</h2>
       <Form.Group className="mb-3" controlId="formBasicEmail">
         <Form.Label>Nombre</Form.Label>

@@ -8,7 +8,7 @@ export function CartProvider({ children }) {
     function addItem(item, quantity){
         if (isInCar(item.id)) {
             let aux = items;
-            let itemIndex = aux.findIndex((element) => element.id == item.id);
+            let itemIndex = aux.findIndex((element) => element.id === item.id);
             aux[itemIndex].quantity += quantity;
             setItems([...aux])
         }else {
@@ -25,7 +25,7 @@ export function CartProvider({ children }) {
     }
 
     function isInCar(itemId){
-        return items.find((element) => element.id == itemId);
+        return items.find((element) => element.id === itemId);
     }
 
     return(
