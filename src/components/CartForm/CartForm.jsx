@@ -5,6 +5,7 @@ import { CartContext } from '../../Context/CartContext';
 import db from '../../services';
 import './CartForm.css';
 import moment from 'moment/moment';
+import { Button } from 'react-bootstrap';
 
 
 export default function CartForm() {
@@ -19,7 +20,7 @@ export default function CartForm() {
       telefono:'',
     },
     compra: {items},
-    fecha: moment().format('DD MM YYYY hh:mm:ss'),
+    fecha: moment().format('DD MM YYYY hh:mm:ss a'),
     total: items.reduce((pv, cv) => pv + (cv.precio * cv.quantity) ,0)
   })
 
@@ -39,10 +40,10 @@ export default function CartForm() {
 const setInFirebase = async (orden) => {
   try {
     const col = collection( db, 'ordenes' )
-    const genOrden = await addDoc(col, orden).then(localStorage.removeItem("items")).then(function(){
-      window.location.href= "/"
+    await addDoc(col, orden).then(localStorage.removeItem("items")).then(function(){
+     window.location.href= "/"
     })
-    alert('su orden se genero correctamente', genOrden.id)
+    alert('su orden se genero correctamente')
   }catch (error){
     console.log(error);
   }
@@ -68,7 +69,7 @@ const setInFirebase = async (orden) => {
         <Form.Label>Teléfono</Form.Label>
         <Form.Control value={telefono} onChange={handleChange} type="text" placeholder="Telefono" name="telefono" required/>
       </Form.Group>
-      <div className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</div>
+      <Button className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
   </Form>
   )
 }
