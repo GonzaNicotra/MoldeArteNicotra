@@ -58,7 +58,7 @@ const setInFirebase = async (orden) => {
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Apellido</Form.Label>
-        <Form.Control value={apellido} onChange={handleChange} type="text" placeholder="Nombre" name="apellido" required/>
+        <Form.Control value={apellido} onChange={handleChange} type="text" placeholder="Apellido" name="apellido" required/>
       </Form.Group>
       <Form.Group className="mb-3">
         <Form.Label>Email</Form.Label>
@@ -68,7 +68,7 @@ const setInFirebase = async (orden) => {
         <Form.Label>Teléfono</Form.Label>
         <Form.Control value={telefono} onChange={handleChange} type="text" placeholder="Telefono" name="telefono" required/>
       </Form.Group>
-      <button className='bComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</button>
+      <div className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</div>
   </Form>
   )
 }
