@@ -8,6 +8,7 @@ import Inicio from '../../Pages/Inicio/Inicio';
 import Diseños from '../../Pages/Diseños/Diseños';
 import Cuidados from '../../Pages/Cuidados/Cuidados';
 import Contacto from '../../Pages/Contacto/Contacto';
+import Error from '../../Pages/Error/Error';
 
 export default function Rutas() {
 
@@ -24,6 +25,7 @@ export default function Rutas() {
                 <Route path='/item/:id' element={<ItemDetailContainer/>} />
                 <Route path='/cart' element={<Cart/>}/>
                 <Route path='/contacto' element={<Contacto/>} />
+                <Route path="*" element={<Error/>} />
             </Routes>
             <Footer/>
         </BrowserRouter>
