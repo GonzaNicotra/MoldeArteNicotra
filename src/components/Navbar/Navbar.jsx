@@ -45,7 +45,7 @@ function BasicNav() {
             <NavLink to={'/cuidados'} className='detail'>
               <Nav.Link href="#link" active>Cuidados</Nav.Link>
             </NavLink>
-            <NavLink to={'/'} className='detail'>
+            <NavLink to={'/contacto'} className='detail'>
               <Nav.Link active href="#link">Contactanos</Nav.Link>
             </NavLink>
             <Link to={'/cart'}>
