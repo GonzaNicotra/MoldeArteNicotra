@@ -1,0 +1,28 @@
+.cuidados {
+    min-height: 100vh;
+    background-color: rgb(252, 227, 231);
+    padding-top: 3rem;
+    color: rgba(73, 73, 73, 0.815);
+    padding-left: 4rem;
+    padding-right: 4rem;
+    padding-bottom: 2rem;
+}
+
+.cuidados>h1 {
+    padding-bottom: 2rem;
+    font-weight: bold;
+}
+
+.cuidados>h2 {
+    padding-bottom: 2rem;
+    font-weight: bold;
+    text-align: left;
+}
+
+.cuidados>ul>li {
+    text-align: left;
+    padding: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+    list-style:disc;
+}

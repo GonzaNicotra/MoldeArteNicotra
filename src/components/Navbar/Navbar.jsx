@@ -39,8 +39,11 @@ function BasicNav() {
                 <NavDropdown.Item href="#action/3.3">Bowls</NavDropdown.Item>
                 </Link>
             </NavDropdown>
-            <NavLink to={'/'} className='detail'>
+            <NavLink to={'/personalizados'} className='detail'>
               <Nav.Link href="#link" active>Diseños Personalizados</Nav.Link>
+            </NavLink>
+            <NavLink to={'/cuidados'} className='detail'>
+              <Nav.Link href="#link" active>Cuidados</Nav.Link>
             </NavLink>
             <NavLink to={'/'} className='detail'>
               <Nav.Link active href="#link">Contactanos</Nav.Link>
