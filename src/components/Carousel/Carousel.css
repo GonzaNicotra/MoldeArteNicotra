@@ -1,9 +1,9 @@
 .carousel {
-    height: 300px;
+    height: 400px;
 }
 
 @media (max-width: 800px) {
     .carousel {
-        height: 150;
+        height: 150px;
     }
 }
