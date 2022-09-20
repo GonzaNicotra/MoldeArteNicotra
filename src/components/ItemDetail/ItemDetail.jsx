@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import ItemCount from '../ItemCount/ItemCount';
 import './ItemDetail.css';
 import { CartContext } from '../../Context/CartContext';
+import { Button } from 'react-bootstrap';
 
 export default function ItemDetail({item}) {
     const {id, nombre, precio, img, info, stock} = item;
@@ -24,10 +25,10 @@ export default function ItemDetail({item}) {
                 <Card.Text className='cardPrice'>${precio}</Card.Text>
                 { count ? <>
                 <div>
-                  <Link to='/cart'><button className='bComprar'>Ir al carrito</button> </Link>
+                  <Link to='/cart'><Button variant='light' className='bComprar'>Ir al carrito</Button> </Link>
                 </div>
                 <div>
-                  <Link to={'/productos'}><button className='bComprar'>Agregar más productos</button></Link>
+                  <Link to={'/productos'}><Button variant='light' className='bComprar'>Agregar más productos</Button></Link>
                 </div>
                 </> :
                   <ItemCount stock={stock} initial={0} onAdd={onAdd}/> }

@@ -2,7 +2,8 @@ import React from 'react'
 import { useContext } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
 import { CartContext } from '../../Context/CartContext';
-import './CartItems.css'
+import './CartItems.css';
+import { Button } from 'react-bootstrap';
 
 export default function CartItems({ nombre, precio, quantity, id, img }) {
 
@@ -24,8 +25,8 @@ export default function CartItems({ nombre, precio, quantity, id, img }) {
               <p className='fw-bold'>Cantidad: {quantity}</p>
             </Col>
             <Col className='p-4'>
-              <button className='bComprar' onClick={() => removeItem(id)} >
-                Remover</button>
+              <Button variant='light' className='bComprar' onClick={() => removeItem(id)} >
+                Remover</Button>
             </Col>
           </Row>
         </Container>

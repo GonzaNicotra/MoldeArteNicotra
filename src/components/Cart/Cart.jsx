@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import './Cart.css'
 import CartItems from '../CartItems/CartItems';
 import CartForm from '../CartForm/CartForm';
+import { Button } from 'react-bootstrap';
 
 export default function Cart() {
   const {items, clear} = useContext(CartContext)
@@ -18,7 +19,7 @@ export default function Cart() {
           Carrito vacio
         </div>
       <div>
-        <Link to={'/'}><button className='bComprar'> Volver al Inicio</button></Link>
+        <Link to={'/'}><Button variant='light' className='bComprar'> Volver al Inicio</Button></Link>
       </div>
     </> :
     <>
@@ -29,8 +30,8 @@ export default function Cart() {
         </div>
         <div className='row contBtn'>
           <div className='col'>
-            <div><Link to={'/productos'}><button className='bComprar'>Agregar más productos</button></Link></div>
-            <div><button className='bComprar' onClick={clear}>Vaciar Carrito</button></div>
+            <div><Link to={'/productos'}><Button variant='light' className='bComprar'>Agregar más productos</Button></Link></div>
+            <div><Button variant='light' className='bComprar' onClick={clear}>Vaciar Carrito</Button></div>
           </div>
         <h3 className='fw-bold col'>Precio total = ${items.reduce((pv, cv) => pv + (cv.precio * cv.quantity) ,0)}</h3>
         </div>

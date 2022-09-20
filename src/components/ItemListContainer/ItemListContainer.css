@@ -6,3 +6,9 @@
 .color {
     color: purple;
 }
+
+@media (max-width: 800px) {
+    .itemList {
+        padding-bottom: 4rem;
+    }
+}

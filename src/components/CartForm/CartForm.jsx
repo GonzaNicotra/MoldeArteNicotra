@@ -69,7 +69,7 @@ const setInFirebase = async (orden) => {
         <Form.Label>Teléfono</Form.Label>
         <Form.Control value={telefono} onChange={handleChange} type="text" placeholder="Telefono" name="telefono" required/>
       </Form.Group>
-      <Button className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
+      <Button  variant='light' className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
   </Form>
   )
 }
