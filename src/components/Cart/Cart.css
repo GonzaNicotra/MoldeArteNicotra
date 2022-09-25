@@ -3,6 +3,11 @@
     margin-top: 3rem;
 }
 
+.contBtn {
+    padding-top: 2rem;
+    padding-left: 0.5rem;
+}
+
 @media (max-width: 800px) {
     .contBtn {
         margin-right: auto;
