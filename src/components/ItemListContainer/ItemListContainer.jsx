@@ -2,7 +2,6 @@ import './ItemListContainer.css';
 import React, { useEffect } from 'react';
 import { useState } from 'react';
 import ItemList from '../ItemList/ItemList';
-import Spinner from 'react-bootstrap/Spinner';
 import {useParams} from 'react-router-dom';
 import db from '../../services';
 import { collection, getDocs } from 'firebase/firestore';
