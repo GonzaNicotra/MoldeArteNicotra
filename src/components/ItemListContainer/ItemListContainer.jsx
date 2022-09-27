@@ -6,6 +6,7 @@ import Spinner from 'react-bootstrap/Spinner';
 import {useParams} from 'react-router-dom';
 import db from '../../services';
 import { collection, getDocs } from 'firebase/firestore';
+import SpinnerLoader from '../SpinnerLoader/SpinnerLoader';
 
 export default function ItemListContainer() {
   const [items, setItems] = useState([])
@@ -41,7 +42,7 @@ getColData()
       </div>
       <div>
         {items.length < 1 ?
-        <Spinner animation="border" className='color'/>:
+        <SpinnerLoader/>:
         <div>
           <ItemList items={items}/>
         </div>

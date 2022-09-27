@@ -5,10 +5,14 @@ import './Contacto.css';
 import moment from 'moment/moment';
 import { collection, addDoc } from 'firebase/firestore';
 import db from '../../services';
-
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import { useNavigate } from 'react-router-dom';
 
 export default function Contacto() {
 
+    const MySwal = withReactContent(Swal);
+    const navigate = useNavigate();
     const [ contacto, setContacto ] = useState({
         cont:{
           nombre:'',
@@ -34,10 +38,14 @@ export default function Contacto() {
     const setFirebase = async (mensaje) => {
     try {
         const col = collection( db, 'mensajes' )
-        await addDoc(col, mensaje).then(function(){
-            window.location.href= "/"
-           })
-        alert('Mensaje enviado correctamente')
+        await addDoc(col, mensaje).then(() => {
+            MySwal.fire({
+                title: <strong>Mensaje enviado correctamente</strong>,
+                icon: 'success'
+              })
+        }).then(() => {
+            navigate('/')
+          })
         }catch (error){
             console.log(error);
         }

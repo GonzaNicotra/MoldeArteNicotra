@@ -6,12 +6,18 @@ import db from '../../services';
 import './CartForm.css';
 import moment from 'moment/moment';
 import { Button } from 'react-bootstrap';
-
+import Swal from 'sweetalert2';
+import withReactContent from 'sweetalert2-react-content';
+import { useNavigate } from 'react-router-dom';
+import SpinnerLoader from '../SpinnerLoader/SpinnerLoader';
 
 export default function CartForm() {
 
-  const { items } = useContext(CartContext)
- 
+  const { items, clear } = useContext(CartContext);
+  const MySwal = withReactContent(Swal);
+  const navigate = useNavigate();
+  const [loading, setLoading] = useState(false)
+  
   const [formulario, setFormulario ] = useState({
     buyer:{
       nombre:'',
@@ -38,19 +44,34 @@ export default function CartForm() {
 };
 
 const setInFirebase = async (orden) => {
+  if(nombre === "" || apellido === "" || email === "" || telefono === "" ){
+    setLoading(false)
+    MySwal.fire({
+        title: <strong>Error!</strong>,
+        html: <i>Faltan completar los datos</i>,
+        icon: 'error'
+      })}else{
   try {
+    setLoading(true)
     const col = collection( db, 'ordenes' )
-    await addDoc(col, orden).then(localStorage.removeItem("items")).then(function(){
-     window.location.href= "/"
-    })
-    alert('su orden se genero correctamente')
+    await addDoc(col, orden).then(({id}) =>{
+      MySwal.fire({
+        title: <strong>Gracias por su compra!</strong>,
+        html: <i>Su ID de compra es: {id}</i>,
+        icon: 'success'
+      })
+    }).then(() => {
+      navigate('/')
+    }).then(clear)
   }catch (error){
     console.log(error);
-  }
+  }}
 }
 
 
   return (
+    <>{
+      loading === true ? (<SpinnerLoader/>):
     <Form className='col-sm-12 col-md-4 p-5 row d-flex justify-content-center form'>
       <h2>Datos de Compra</h2>
       <Form.Group className="mb-3">
@@ -71,5 +92,7 @@ const setInFirebase = async (orden) => {
       </Form.Group>
       <Button  variant='light' className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
   </Form>
+}
+  </>
   )
 }
