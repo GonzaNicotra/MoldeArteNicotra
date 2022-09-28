@@ -13,3 +13,9 @@
         margin-right: auto;
     }
 }
+
+@media (min-height: 1000px) {
+    .cart {
+        min-height: 90vh;
+    }
+}

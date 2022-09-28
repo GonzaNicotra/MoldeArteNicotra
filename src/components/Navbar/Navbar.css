@@ -16,3 +16,10 @@
     border-radius: 1rem;
     border: 1px solid whitesmoke;
 }
+
+@media (min-height: 1000px) {
+    .nav {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+}

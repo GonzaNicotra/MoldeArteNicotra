@@ -8,3 +8,9 @@
         padding-bottom: 4rem;
     }
 }
+
+@media (min-height: 1000px) {
+    .itemList {
+        min-height: 90vh;
+    }
+}

@@ -15,13 +15,13 @@ export default function CartItems({ nombre, precio, quantity, id, img }) {
             <Col className='p-2'>
               <img className='imgItem' src={img} alt={nombre} />
             </Col>
-            <Col className='p-4'>
-              <h3>{nombre}</h3>
+            <Col className='p-4 cartText'>
+              <h3 className='fw-bold'>{nombre}</h3>
             </Col>
-            <Col className='p-4'>
+            <Col className='p-4 cartText'>
               <p className='fw-bold'>Precio: ${precio}</p>
             </Col>
-            <Col className='p-4'>
+            <Col className='p-4 cartText'>
               <p className='fw-bold'>Cantidad: {quantity}</p>
             </Col>
             <Col className='p-4'>

@@ -26,3 +26,15 @@
     font-size: 1.2rem;
     list-style:disc;
 }
+
+@media (min-height: 1000px) {
+    .cuidados>h1 {
+        padding-bottom: 4rem;
+        font-size: 3rem;
+    }
+
+    .cuidados>ul>li {
+        padding: 1rem;
+        font-size: 2rem;
+    }
+}

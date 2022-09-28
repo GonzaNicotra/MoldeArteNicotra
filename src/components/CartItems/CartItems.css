@@ -4,3 +4,9 @@
     border-radius: 10px;
     border: 7px inset rgba(138, 48, 126, 0.733);
 }
+
+@media (min-height: 1000px) {
+    .cartText {
+        font-size: 25px;
+    }
+}

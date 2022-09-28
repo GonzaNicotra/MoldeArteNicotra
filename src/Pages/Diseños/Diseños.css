@@ -43,3 +43,28 @@
         padding-bottom: 3rem;
     }
 }
+
+@media (min-height: 1000px) {
+    .pers>h1 {
+        font-size: 3rem;
+        padding-top: 6rem;
+    }
+
+    .pers>h2 {
+        padding-top: 2rem;
+    }
+
+    .pers__lista {
+        padding-top: 2rem;
+        font-size: 2rem;
+    }
+
+    .pers__lista__dos {
+        padding-top: 4rem;
+        font-size: 2rem;
+    }
+    .pers__lista__tres {
+        padding-top: 2rem;
+        font-size: 2rem;
+    }
+}

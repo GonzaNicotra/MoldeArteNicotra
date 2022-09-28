@@ -2,3 +2,9 @@
     font-size: 25px;
     font-weight: bold;
 }
+
+@media (min-height: 1000px) {
+    .tam {
+        font-size: 40px;
+    }
+}

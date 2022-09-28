@@ -53,21 +53,21 @@ export default function Contacto() {
 
   return (
     <div className='contacto d-flex justify-content-center'>
-        <Form className='col-sm-12 col-md-4 p-4 row '>
+        <Form className='col-sm-12 col-md-4 p-4'>
             <h1 className='mb-4'>Contactanos</h1>
-            <Form.Group className="mb-3" controlId="formBasicEmail">
+            <Form.Group className="mb-3 cont" controlId="formBasicEmail">
                 <Form.Label>Nombre:</Form.Label>
                 <Form.Control value={nombre} onChange={handleChange} type="text" placeholder="Nombre" name='nombre'/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicPassword">
+            <Form.Group className="mb-3 cont" controlId="formBasicPassword">
                 <Form.Label>Email:</Form.Label>
                 <Form.Control value={email} onChange={handleChange} type="email" placeholder="Email" name='email'/>
             </Form.Group>
-            <Form.Group className="mb-3" controlId="exampleForm.ControlTextarea1">
+            <Form.Group className="mb-3 cont" controlId="exampleForm.ControlTextarea1">
                 <Form.Label>Mensaje:</Form.Label>
                 <Form.Control value={mensaje} onChange={handleChange} as="textarea" rows={3} name='mensaje'/>
             </Form.Group>
-            <Button className='bComprar' onClick={() => setFirebase(contacto) }>
+            <Button className='bComprar contBtn' onClick={() => setFirebase(contacto) }>
             Submit
             </Button>
         </Form>

@@ -1,5 +1,5 @@
 .inicio {
-    min-height: 70vh;
+    min-height: 100vh;
 }
 
 .textoInicio {
@@ -26,4 +26,12 @@
 .bInicio:hover {
     transform: translate(0, -2px);
     border: 1px solid white;
+}
+
+@media (min-height: 1000px) {
+    .textoInicio {
+        margin-bottom: 10rem;
+        padding-top: 6rem;
+        padding-bottom: 6rem;
+    }
 }

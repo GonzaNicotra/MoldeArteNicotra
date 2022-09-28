@@ -58,3 +58,15 @@
         margin-bottom: 1rem;
     }
 }
+
+@media (min-height: 1000px) {
+    .cardTitle {
+        font-size: 40px;
+    }
+    .cardText {
+        font-size: 30px;
+    }
+    .cardPrice {
+        font-size: 40px;
+    }
+}
