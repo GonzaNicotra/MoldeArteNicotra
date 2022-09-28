@@ -32,6 +32,7 @@ export default function ItemDetail({item}) {
                 </div>
                 </> :
                   <ItemCount stock={stock} initial={0} onAdd={onAdd}/> }
+                <Card.Text className='stockText' >Stock disponible: {stock}</Card.Text>
         </Card.Body>
         </Card>
 

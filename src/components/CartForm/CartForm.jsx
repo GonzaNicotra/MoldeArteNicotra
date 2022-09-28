@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react'
 import Form from 'react-bootstrap/Form';
-import { collection, addDoc } from 'firebase/firestore';
+import { collection, addDoc, updateDoc, doc } from 'firebase/firestore';
 import { CartContext } from '../../Context/CartContext';
 import db from '../../services';
 import './CartForm.css';
@@ -67,6 +67,22 @@ const setInFirebase = async (orden) => {
   }}
 }
 
+const updateFirebase = async (formulario)=>{
+  updateStock(items)
+  setInFirebase(formulario) 
+}
+
+const updateStock = (items)=>{
+  setLoading(true)
+  items.forEach(e=>{
+  const {id, stock, quantity} = e
+  let newStock = stock - quantity
+  const producto = doc(db,"productos", id)
+  updateDoc(producto,{stock: newStock})
+  })
+  
+}
+
   return (
     <>{
       loading === true ? (<SpinnerLoader/>):
@@ -88,7 +104,7 @@ const setInFirebase = async (orden) => {
         <Form.Label>Teléfono</Form.Label>
         <Form.Control value={telefono} onChange={handleChange} type="text" placeholder="Telefono" name="telefono" required/>
       </Form.Group>
-      <Button  variant='light' className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
+      <Button  variant='light' className='fComprar' onClick={() => updateFirebase(formulario) } >Terminar Compra</Button>
   </Form>
 }
 </>

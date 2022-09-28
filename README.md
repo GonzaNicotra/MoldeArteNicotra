@@ -3,7 +3,7 @@
 ## Repositorio de e-commerce de productos de cerámica.
 
 
-E-Commerce desarrollado durante el curso de React de Coderhouse, completamente funcional, utilizando base de datos de Firebase donde se reciben las ordenes de compra y consultas.
+E-Commerce desarrollado durante el curso de React de Coderhouse, completamente funcional, utilizando base de datos de Firebase donde se reciben las ordenes de compra y consultas, y se descuenta el stock disponible luego de la compra.
 
 
 ### Version Final: [E-Commerce-MoldeArte](https://molde-arte-nicotra.vercel.app/)
