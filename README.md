@@ -11,7 +11,7 @@ E-Commerce desarrollado durante el curso de React de Coderhouse, completamente f
 ---
 ## Funcionamiento del proyecto:
 
-![Alt Text](MoldeArtw.gif)
+![Alt Text](MoldeArte.gif)
 
 ---
 
