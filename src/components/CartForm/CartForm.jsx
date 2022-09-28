@@ -31,7 +31,6 @@ export default function CartForm() {
   })
 
   const { buyer: { email, nombre, apellido, telefono }} = formulario;
-
   const handleChange = (e)=>{
     const { name, value } = e.target
     setFormulario({
@@ -68,7 +67,6 @@ const setInFirebase = async (orden) => {
   }}
 }
 
-
   return (
     <>{
       loading === true ? (<SpinnerLoader/>):
@@ -93,6 +91,5 @@ const setInFirebase = async (orden) => {
       <Button  variant='light' className='fComprar' onClick={() => setInFirebase(formulario) } >Terminar Compra</Button>
   </Form>
 }
-  </>
-  )
-}
+</>
+)}

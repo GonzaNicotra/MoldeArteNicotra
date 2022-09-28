@@ -12,7 +12,7 @@ import {Link, NavLink} from 'react-router-dom';
 function BasicNav() {
   
   return (
-    <Navbar style={{backgroundColor: "#d368c5d3"}} variant='dark' expand="lg" className='nav'>
+    <Navbar sticky="top" style={{backgroundColor: "#d368c5d3"}} variant='dark' expand="lg" className='nav'>
       <Container>
         <NavLink to={'/'}>
           <Navbar.Brand>
